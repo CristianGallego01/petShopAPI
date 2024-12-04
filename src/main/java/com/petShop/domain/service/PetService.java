@@ -36,7 +36,7 @@ public class PetService {
     }
 
     public PetDTO update(PetDTO petDTO){
-        return petDomainRepository.save(petDTO);
+        return petDomainRepository.update(petDTO);
     }
 
     public void delete(int id){

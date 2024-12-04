@@ -14,7 +14,7 @@ public class Pet {
 
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
+    @Column(name = "id_mascota")
     private Integer idPet;
 
     @Column(name = "nombre")

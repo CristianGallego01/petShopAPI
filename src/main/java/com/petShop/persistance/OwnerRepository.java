@@ -72,4 +72,9 @@ public class OwnerRepository implements OwnerDomainRepository {
     public long countAll(){
         return ownerCrudRepository.count();
     }
+
+    @Override
+    public Optional<List<OwnerDTO>> getByName(String name) {
+        return Optional.empty();
+    }
 }

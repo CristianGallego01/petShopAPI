@@ -16,20 +16,20 @@ public class Owner {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
+    @Column(name = "id_propietario")
     private Integer idOwner;
 
-    @Column(name = "nombre")
+    @Column(name = "nombre_propietario")
     private String nameOwner;
 
-    @Column(name = "apellido")
+    @Column(name = "apellido_propietario")
     private String lastNameOwner;
 
     @Column(name = "correo")
     private String email;
 
     @Column(name = "telefono")
-    private Integer number;
+    private String number;
 
     @Column(name = "direccion")
     private String address;

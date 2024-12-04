@@ -25,10 +25,17 @@ public interface PetMapper {
 
     // Método de mapeo explícito para convertir Propietario a Long (su id)
     @InheritInverseConfiguration
-    Pet toPet(PetDTO petDTO);
+//    Pet toPet(PetDTO petDTO);
 
     @Mapping(target = "owner", source = "propietarioDominio")
     Pet toEntity(PetDTO petDTO);
+
+    @Mapping(target = "idMascota", source = "idPet")
+    default Integer map(Pet pet) {
+        if (pet != null) {
+            return pet.getIdPet(); // Retorna el id depet2
+        } return null;
+    }
 
     // Método de mapeo explícito para convertir Propietario
     @Mapping(target = "idOwner", source = "owner")

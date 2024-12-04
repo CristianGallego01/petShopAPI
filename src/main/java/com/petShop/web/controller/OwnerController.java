@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/Owners")
+@RequestMapping("/owners")
 public class OwnerController {
     @Autowired
     private OwnerService ownerService;

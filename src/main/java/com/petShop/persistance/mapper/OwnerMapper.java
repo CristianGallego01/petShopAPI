@@ -1,10 +1,10 @@
 package com.petShop.persistance.mapper;
 
-import ch.qos.logback.core.model.ComponentModel;
+
 import com.petShop.domain.dto.OwnerDTO;
 
 import com.petShop.persistance.entity.Owner;
-import com.petShop.persistance.entity.Pet;
+
 import org.mapstruct.InheritInverseConfiguration;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;

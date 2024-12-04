@@ -4,10 +4,11 @@ import com.petShop.domain.dto.OwnerDTO;
 import com.petShop.domain.repository.OwnerDomainRepository;
 import com.petShop.persistance.mapper.OwnerMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
-
+@Service
 public class OwnerService {
 
     @Autowired
@@ -28,12 +29,12 @@ public class OwnerService {
         return ownerDomainRepository.save(ownerDTO);
     }
 
-    public Optional<List<OwnerDTO>> getByName(String name) {
-        return ownerDomainRepository.getByName(name);
+    public OwnerDTO update(OwnerDTO ownerDTO){
+        return ownerDomainRepository.update(ownerDTO);
     }
 
-    public OwnerDTO update(OwnerDTO ownerDTO){
-        return ownerDomainRepository.save(ownerDTO);
+    public Optional<List<OwnerDTO>> getByName(String name) {
+        return ownerDomainRepository.getByName(name);
     }
 
     public void delete(int id){
