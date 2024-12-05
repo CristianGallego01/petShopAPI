@@ -28,9 +28,7 @@ public class OwnerRepository implements OwnerDomainRepository {
                 .map(mapper::toOwnerDTO) // Mapea cada Pet a PetDTO
                 .collect(Collectors.toList());
     }
-//    public List<Owner> getAll(){
-//        return (List<Owner>) ownerCrudRepository.findAll();
-//    }
+
     @Override
     public Optional<OwnerDTO> getOwnerById(int idOwner){
         Optional<Owner> owner = ownerCrudRepository.findById(idOwner);

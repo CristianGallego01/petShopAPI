@@ -18,10 +18,6 @@ public class PetController {
     @Autowired
     private PetService petService;
 
-//    @GetMapping("/getAll")
-//    public Iterable<PetDTO> getAll() {
-//        return petService.getAll();
-//    }
 
     // Consultar todos los registros
     @Operation(summary = "Obtener todas las mascotas", description = "Retorna una lista de todas las mascotas registradas")

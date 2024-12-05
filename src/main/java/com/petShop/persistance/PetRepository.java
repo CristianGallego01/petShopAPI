@@ -22,12 +22,7 @@ public class PetRepository implements PetDomainRepository {
     @Autowired
     private PetMapper mapper;
 
-    //metodos por default
-//    @Override
-//    public List<PetDTO> getAll(){
-//        List<Pet> pets = (List<Pet>) petCrudRepository.findAll();
-//        return mapper.toPetDTOs(pets); //corregido a toPetDTO
-//    }
+
     // Consultar todos los registros
     @Override
     public Iterable<PetDTO> getAll() {
@@ -38,10 +33,6 @@ public class PetRepository implements PetDomainRepository {
          .collect(Collectors.toList());
     }
 
-//    @Override
-//    public Optional <PetDTO> getPetById(int idPet){
-//        return petCrudRepository.findById(idPet).map(Pet -> mapper.toPetDTO(Pet)); //corregido a toPetDTO
-//    }
 
     // Consultar por ID
     @Override
@@ -50,11 +41,7 @@ public class PetRepository implements PetDomainRepository {
         return pet.map(mapper::toPetDTO);
     }
 
-//    public PetDTO save(PetDTO petDTO) {
-//        Pet pet = mapper.toPet(petDTO);  // Mapeo de PetDTO a Pet
-//        Pet savedPet = petCrudRepository.save(pet);  // Guardar en el repositorio
-//        return mapper.toPetDTO(savedPet);  // Mapeo de Pet (persistencia) a PetDTO
-//    }
+
 
     // Guardar
     @Override
@@ -93,10 +80,7 @@ public class PetRepository implements PetDomainRepository {
     }
 
 
-//    @Override
-//    public void deleted(int idPet){
-//        petCrudRepository.deleteById(idPet);
-//    }
+
 
     // Validar si existe por ID
     @Override
@@ -115,13 +99,6 @@ public class PetRepository implements PetDomainRepository {
         return Optional.empty();
     }
 
-    //query method
-    public List<Pet> getBySpecies (String species){
-        return petCrudRepository.findBySpeciesOrderByNamePetAsc(species);
-    }
 
-    public List<Pet> findPetsBySpecies(String species) {
-        return petCrudRepository.findPetsBySpecies(species);
-    }
 
 }

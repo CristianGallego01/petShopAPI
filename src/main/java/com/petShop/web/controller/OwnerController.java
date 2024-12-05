@@ -28,7 +28,7 @@ public class OwnerController {
         return ownerService.save(ownerDTO);
     }
 
-    @PostMapping("/update")
+    @PutMapping("/update")
     public OwnerDTO update(@RequestBody OwnerDTO ownerDTO) {
         return ownerService.update(ownerDTO);
     }

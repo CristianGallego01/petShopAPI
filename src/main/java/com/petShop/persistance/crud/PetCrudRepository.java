@@ -8,8 +8,5 @@ import org.springframework.data.repository.query.Param;
 import java.util.List;
 
 public interface PetCrudRepository extends CrudRepository<Pet,Integer> {
-    List<Pet> findBySpeciesOrderByNamePetAsc(String species);
 
-    @Query(value = "SELECT * FROM mascotas WHERE especies= :species ORDER BY nombre ASC",nativeQuery = true)
-    List<Pet> findPetsBySpecies(@Param("species")String species);
 }
